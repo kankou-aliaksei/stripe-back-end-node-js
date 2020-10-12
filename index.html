@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <div>
+      <button id="order-btn" class="btn">ORDER</button>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const stripe = Stripe('pk_test_51H3nMELTuKadYbYj19eJ1uTo5Fx0nK25PZJMMTyiH0EnYsWz8jEG5nSu45UP6aef7zHAzHZEmgRE2FwNYkET6SUq00PigMAcWK');
+        const orderBtn = document.getElementById('order-btn');
+        orderBtn.addEventListener('click', function() {
+          stripe.redirectToCheckout({
+            sessionId: "cs_test_2EbhDNOD8fMxH8NhDFTRqJQH4CPxKhmX3fFfY5brFgjucff0ypF0Xd1H"
+          });
+        });
+    </script>
+    </div>
+  </body>
+</html>
